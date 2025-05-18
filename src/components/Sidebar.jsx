@@ -22,7 +22,7 @@ const Sidebar = () => {
           isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
         } md:translate-x-0`}
       >
-        <h2 className="text-2xl font-bold mb-6">My Dashboard</h2>
+        <h2 className="text-2xl font-bold mb-6">Yash Rajput</h2>
         <nav className="space-y-4">
           {/* Home */}
           <Link to="/" className="flex items-center gap-2 hover:text-gray-300" onClick={closeSidebar}>
