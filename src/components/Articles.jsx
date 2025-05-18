@@ -14,6 +14,54 @@ const Articles = () => {
       words: 1500,
       createdOn: "2025-05-17",
     },
+    {
+      title: "Understanding TypeScript",
+      keyword: "TypeScript",
+      words: 1300,
+      createdOn: "2025-05-16",
+    },
+    {
+      title: "Node.js for Beginners",
+      keyword: "Node.js",
+      words: 1400,
+      createdOn: "2025-05-15",
+    },
+    {
+      title: "Mastering CSS Flexbox",
+      keyword: "CSS",
+      words: 1100,
+      createdOn: "2025-05-14",
+    },
+    {
+      title: "Building REST APIs with Express",
+      keyword: "Express",
+      words: 1600,
+      createdOn: "2025-05-13",
+    },
+    {
+      title: "Getting Started with MongoDB",
+      keyword: "MongoDB",
+      words: 1250,
+      createdOn: "2025-05-12",
+    },
+    {
+      title: "Vue.js Crash Course",
+      keyword: "Vue.js",
+      words: 1450,
+      createdOn: "2025-05-11",
+    },
+    {
+      title: "Asynchronous JavaScript Explained",
+      keyword: "Async JS",
+      words: 1350,
+      createdOn: "2025-05-10",
+    },
+    {
+      title: "Deploying Apps with Vercel",
+      keyword: "Deployment",
+      words: 1000,
+      createdOn: "2025-05-09",
+    },
   ];
 
   const publishedArticles = [
@@ -128,29 +176,30 @@ const Articles = () => {
         </div>
       )}
 
-      <div className="overflow-x-auto">
+      {/* Scrollable Table Container */}
+      <div className="overflow-x-auto max-h-[500px] overflow-y-auto border rounded-lg">
         <table className="min-w-full table-auto">
           <thead>
             <tr>
-              <th className="px-4 py-3 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+              <th className="px-4 py-3 bg-gray-100 text-left text-sm font-semibold text-black">
                 <input type="checkbox" />
               </th>
-              <th className="px-4 py-3 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+              <th className="px-4 py-3 bg-gray-100 text-left text-sm font-semibold text-black">
                 Article Title
               </th>
-              <th className="px-4 py-3 bg-gray-100 text-left text-sm font-semibold text-gray-600">
-                Keyword
+              <th className="px-4 py-3 bg-gray-100 text-left text-sm font-semibold text-black">
+                Keyword [Traffic]
               </th>
-              <th className="px-4 py-3 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+              <th className="px-4 py-3 bg-gray-100 text-left text-sm font-semibold text-black">
                 Words
               </th>
-              <th className="px-4 py-3 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+              <th className="px-4 py-3 bg-gray-100 text-left text-sm font-semibold text-black">
                 Created On
               </th>
-              <th className="px-4 py-3 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+              <th className="px-4 py-3 bg-gray-100 text-left text-sm font-semibold text-black">
                 Action
               </th>
-              <th className="px-4 py-3 bg-gray-100 text-left text-sm font-semibold text-gray-600">
+              <th className="px-4 py-3 bg-gray-100 text-left text-sm font-semibold text-black">
                 Publish
               </th>
             </tr>
@@ -158,24 +207,24 @@ const Articles = () => {
           <tbody>
             {filteredArticles.map((article, index) => (
               <tr key={index} className="border-t">
-                <td className="px-4 py-4 text-sm text-gray-700">
+                <td className="px-4 py-2 text-sm text-gray-700">
                   <input type="checkbox" />
                 </td>
-                <td className="px-4 py-4 text-sm text-gray-700">
+                <td className="px-4 py-2 text-sm text-gray-700">
                   {article.title}
                 </td>
-                <td className="px-4 py-4 text-sm text-gray-700">
+                <td className="px-4 py-2 text-sm text-gray-700">
                   {article.keyword}
                 </td>
-                <td className="px-4 py-4 text-sm text-gray-700">
+                <td className="px-4 py-2 text-sm text-gray-700">
                   {article.words}
                 </td>
-                <td className="px-4 py-4 text-sm text-gray-700">
+                <td className="px-4 py-2 text-sm text-gray-700">
                   {article.createdOn}
                 </td>
-                <td className="px-4 py-4 text-sm text-gray-700">
+                <td className="px-4 py-2 text-sm text-gray-700">
                   <button
-                    className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600"
+                    className="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center me-2 mb-2"
                     onClick={() => setSelectedArticle(article)}
                   >
                     View
